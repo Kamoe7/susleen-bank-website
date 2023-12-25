@@ -15,6 +15,7 @@
 
   </head>
   <body>
+    {% include 'nav.html' %}
     <div  class="container">
     <h1 class="text-center mt-3 mb-3">FASNETY</h1>
     <h1 class="text-center mb-3 ">千卂丂卄丨ㄖ几</h1>
@@ -25,10 +26,17 @@
     <h2 class="text-center mt-3 mb-3"> 
       ABOUT
     </h2>
+      <div class="row"   style="margin-bottom:16px;">
+        <div class="col-md-6">
+
     <p  class="lead text-danger">Quisque venenatis convallis nisl non molestie. Pellentesque laoreet diam at velit vehicula viverra. Quisque mollis metus enim, posuere semper est tincidunt in. Fusce maximus nibh non mauris tempus, nec imperdiet ex lobortis. Proin lectus erat, finibus in sapien in, fermentum vulputate erat. Sed egestas, massa sed consequat cursus, turpis sapien finibus ipsum, a porttitor lectus purus eget sapien. Pellentesque ut nunc semper, tincidunt mauris vitae, ornare nulla. Sed ultricies quam quis arcu vestibulum, nec vestibulum magna consequat. In scelerisque ultricies enim, pretium semper augue consequat at. Cras suscipit ullamcorper rutrum. In rutrum dapibus malesuada. Cras eu erat enim. Nulla varius a nunc id bibendum. Mauris sed mauris eu mauris vulputate fringilla non ut eros.</p>
-<div class="text-center" style="margin-bottom:16px;">
-  <h1><b>POST</b</h1>
-</div>
+          </div>
+    <div class="d-none d-md-block col-md-6">  
+      <img src ="/static/ultra.jpg"  style="height:320px;border-radius:4px;">
+    </div>
+    <div class="text-center" style="margin-bottom:16px;">
+      <h1><b>POST</b</h1>
+    </div>
       <div>
         {% for job in jobs %}
           {% include 'jobsitems.html' %}
@@ -37,10 +45,11 @@
       </div>
       <div class="text-center" >
  
-        <button class="btn btn-primary mb-3">contact us:</button>
+        <a href ="mailto:fasnety@gmail.com?subject=Question%20about%20the%20Jobs%20opening&body=My%20name%3A(Your%20name)%0D%0A%0D%0AMy%20Questions%3A(Your%20questions%20here~)" button class="btn btn-primary mb-3">contact us:</a>
         <p>COPYRIGHT-2023,@SAGAR</p>
       </div>
      
     </div>
+    {% include 'footer.html' %}
   </body>
 </html>
